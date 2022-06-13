@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import {
     getAuth,
-    signInWithRedirect,
+    // signInWithRedirect,
     signInWithPopup,
     GoogleAuthProvider
 } from 'firebase/auth';
@@ -18,28 +18,27 @@ const firebaseConfig = {
     storageBucket: "crwn-clothing-db-5f4f1.appspot.com",
     messagingSenderId: "870522551236",
     appId: "1:870522551236:web:879e866ba5a3c6355fc291"
-  };
-  
+};
 
-  const firebaseApp = initializeApp(firebaseConfig);
 
-  const provider = new GoogleAuthProvider();
-  provider.setCustomParameters({
-      prompt: "select_account"
-  });
+const firebaseApp = initializeApp(firebaseConfig);
 
-  export const auth = getAuth();
-  export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
-  
-  export const db = getFirestore();
+const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({
+    prompt: "select_account"
+});
 
-  export const createUserDocumentFromAuth = async (userAuth) => {
+export const auth = getAuth();
+export const signInWithGooglePopup = () => signInWithPopup(auth, googleProvider);
+// export const signInWithGoogleRedirect = () => signInWithRedirect(auth, googleProvider);
+
+export const db = getFirestore();
+
+export const createUserDocumentFromAuth = async(userAuth) => {
     const userDocRef = doc(db, 'users', userAuth.uid);
-    console.log(userDocRef);
 
     const userSnapshot = await getDoc(userDocRef);
-    console.log(userSnapshot);
-    console.log(userSnapshot.exists());
+
     if (!userSnapshot.exists()) {
         const { displayName, email } = userAuth;
         const createdAt = new Date();
@@ -54,7 +53,8 @@ const firebaseConfig = {
             // L.88@3:12
             console.log('error creating the user', error.message);
         }
-        
-    }
 
-  }
+    }
+    return userDocRef;
+
+}

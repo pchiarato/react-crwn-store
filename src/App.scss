@@ -1,30 +1,33 @@
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
- }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 li {
-  list-style: none;
-}
-a, li {
-  text-decoration: none;
-}
-a {
-  &:active,
-  &:visited {
-    color: #000;
-  }
+    list-style: none;
 }
 
+a,
+li {
+    text-decoration: none;
+    color: #000;
+}
+
+a {
+    &:active,
+    &:visited {
+        color: #000;
+    }
+}
 
 .Home {
-  font-family: 'Open Sans Condensed' sans-serif;
+    font-family: 'Open Sans Condensed' sans-serif;
 }
+
 .categories {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
