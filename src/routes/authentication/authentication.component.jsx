@@ -5,11 +5,11 @@ import {
   createUserDocumentFromAuth,
   // signInWithGoogleRedirect,
   // auth
-} from "./../../utils/firebase/firebase.utils";
+} from "../../utils/firebase/firebase.utils";
 
 import SignUpFormComponent from "../../components/sign-up-form/sign-up-form.component";
-import ButtonComponent from "./../../components/button/button.component";
-const SignInComponent = () => {
+import ButtonComponent from "../../components/button/button.component";
+const AuthenticationComponent = () => {
   // useEffect(() => {
   //     (async () => {
   //         const response = await getRedirectResult(auth);
@@ -32,4 +32,4 @@ const SignInComponent = () => {
   );
 };
 
-export default SignInComponent;
+export default AuthenticationComponent;
