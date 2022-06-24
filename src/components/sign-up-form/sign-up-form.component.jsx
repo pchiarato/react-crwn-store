@@ -63,7 +63,7 @@ const SignUpFormComponent = () => {
           handleChange={handleChange}
         />
         <FormInputComponent
-        label={'email'}
+        label={'Email'}
         id={'email'}
         value={email}
         type={'email'}
@@ -72,7 +72,7 @@ const SignUpFormComponent = () => {
         handleChange={handleChange}
         />
         <FormInputComponent
-        label={'password'}
+        label={'Password'}
         id={'password'}
         value={password}
         type={'password'}
@@ -81,7 +81,7 @@ const SignUpFormComponent = () => {
         handleChange={handleChange}
         />
         <FormInputComponent
-        label={'confirm-password'}
+        label={'Confirm Password'}
         id={'confirm-password'}
         value={confirmPassword}
         type={'password'}

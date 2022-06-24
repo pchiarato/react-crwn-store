@@ -19,9 +19,9 @@ const App = () => {
         <Routes>
             <Route path = '/' element = { < NavigationComponent / > }>
                 <Route index element = { < HomeComponent / > }/>
-                <Route path = "shop" element = { < ShopComponent /> }>
+                <Route path = "shop" element = { <ShopComponent /> }>
                 </Route>
-                <Route path = "sign-in" element = { < AuthenticationComponent /> } ></Route>
+                <Route path = "auth" element = { <AuthenticationComponent /> } ></Route>
             </Route>
         </Routes>
     );
