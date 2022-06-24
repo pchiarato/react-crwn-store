@@ -1,11 +1,9 @@
 import { useState } from "react";
-import "./sign-up-form.component.scss";
-import {
-  createAuthUserWithEmailAndPassword,
-  createUserDocumentFromAuth,
-} from "./../../utils/firebase/firebase.utils";
+import {createAuthUserWithEmailAndPassword, createUserDocumentFromAuth} from "./../../utils/firebase/firebase.utils";
 import FormInputComponent from "./../form-input/form-input.component";
 import ButtonComponent from "./../button/button.component";
+
+import "./sign-up-form.component.scss";
 
 const defaultFormField = {
   displayName: "",
@@ -47,7 +45,6 @@ const SignUpFormComponent = () => {
       }
     }
   };
-  console.log(formFields);
   return (
     <div className="sign-up-container">
       <h2>Do not have an account</h2>
