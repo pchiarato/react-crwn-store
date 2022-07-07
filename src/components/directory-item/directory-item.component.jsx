@@ -1,6 +1,6 @@
-import './category-item.component.scss';
+import './directory-item.component.scss';
 
-const CategoryItemComponent = ({categoryItem}) => {
+const DirectoryItemComponent = ({categoryItem}) => {
     const {title, imageUrl} = categoryItem;
     return (
         <div className="category__container">
@@ -15,4 +15,4 @@ const CategoryItemComponent = ({categoryItem}) => {
     );
 }
 
-export default CategoryItemComponent;
+export default DirectoryItemComponent;

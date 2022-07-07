@@ -1,11 +1,11 @@
-import CategoryItemComponent from "../category-item/category-item.component"
+import DirectoryItemComponent from "../directory-item/directory-item.component"
 
 const CategoriesComponent = ({categories}) => {
     return (
         <section className="categories">
         {
           categories.map((category) => (
-            <CategoryItemComponent categoryItem={category} key={category.id}/>
+            <DirectoryItemComponent categoryItem={category} key={category.id}/>
           ))
         }
         </section>
