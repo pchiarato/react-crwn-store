@@ -21,6 +21,11 @@
     display: flex;
     flex-direction: column;
     overflow: scroll;
+
+    .cart-empty-message {
+      align-self: center;
+      margin-top: 100px;
+    }
   }
 
   button {
